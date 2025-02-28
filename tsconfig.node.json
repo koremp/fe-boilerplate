@@ -22,6 +22,7 @@
   },
   "include": [
     "vite.config.ts",
-    ".prettierrc.ts"
+    ".prettierrc.js",
+    "eslint.config.ts"
   ]
 }
