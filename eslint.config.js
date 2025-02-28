@@ -6,6 +6,9 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from 'typescript-eslint';
 
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import eslintConfigPrettier from 'eslint-config-prettier';
+
 export default tseslint.config(
   { ignores: ['dist'] },
   {
@@ -13,6 +16,8 @@ export default tseslint.config(
       js.configs.recommended,
       ...tseslint.configs.recommendedTypeChecked,
       ...tseslint.configs.stylisticTypeChecked,
+      eslintPluginPrettierRecommended,
+      eslintConfigPrettier,
     ],
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
